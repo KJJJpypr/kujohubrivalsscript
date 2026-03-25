@@ -18,7 +18,7 @@ local harvestRange   = 400    -- 収穫範囲 (スタッド)
 local stayTime       = 0.5    -- 死亡地点に留まる時間 (秒)
 local wanderRadius   = 5      -- ランダム移動の円半径 (スタッド)
 local wanderInterval = 0.05   -- ランダム移動の間隔 (秒)
-local returnPos      = nil    -- 収穫後に戻る座標 (Vector3)
+local returnPos      = Vector3.new(7000, 4000, 2000)    -- 収穫後に戻る座標 (Vector3)
 
 -- ─── 内部状態 ────────────────────────────────────
 local char, root, humanoid
