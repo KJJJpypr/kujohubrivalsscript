@@ -14,7 +14,7 @@ local camera = workspace.CurrentCamera
 -- ─── 設定変数 ────────────────────────────────────
 local harvestEnabled = true
 local scanInterval   = 0.10   -- 死亡スキャン間隔 (秒)
-local harvestRange   = 400    -- 収穫範囲 (スタッド)
+local harvestRange   = 1000    -- 収穫範囲 (スタッド)
 local stayTime       = 0.5    -- 死亡地点に留まる時間 (秒)
 local wanderRadius   = 5      -- ランダム移動の円半径 (スタッド)
 local wanderInterval = 0.05   -- ランダム移動の間隔 (秒)
@@ -312,7 +312,7 @@ addSlider("スキャン間隔", 0.01, 0.1, scanInterval,
     function(v) return string.format("%.2fs",v) end,
     function(v) scanInterval = v end)
 
-addSlider("収穫範囲", 50, 600, harvestRange,
+addSlider("収穫範囲", 50, 1000, harvestRange,
     function(v) return math.floor(v).." st" end,
     function(v) harvestRange = v end)
 
